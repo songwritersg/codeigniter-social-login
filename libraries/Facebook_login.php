@@ -23,7 +23,7 @@ class Facebook_login extends Social_login {
         $add_param = sprintf('?access_token=%s&fields=%s',$access_token, $fields);
 
         $result = json_decode(parent::_get_info($access_token, $add_param), TRUE);
-        print_r($result);
+
 
         if( $result['id'] ) {
             return $result;
